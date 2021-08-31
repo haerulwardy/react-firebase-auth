@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
 
@@ -18,8 +18,12 @@ export default function Dashboard() {
 
     return (
         <div className="container py-5">
-            <h3>hello Ward!</h3>
-            <button className="btn btn-primary px-4" onClick={handleSignout}>Signout</button>
+            <nav className="navbar navbar-light bg-light">
+                <div className="container-fluid">
+                    <h3>hello Ward!</h3>
+                    <button className="btn btn-primary px-4" onClick={handleSignout}>Signout</button>
+                </div>
+            </nav>
         </div>
     )
 }
